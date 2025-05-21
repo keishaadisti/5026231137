@@ -150,7 +150,7 @@
                 <span>Linktree Task</span>
                 <span class="dots">...</span>
             </a>
-            <a href="{{ url('/index') }}" class="link-item">
+            <a href="{{ url('/ets') }}" class="link-item">
                 <i class="fas fa-book"></i>
                 <span>ETS</span>
                 <span class="dots">...</span>
