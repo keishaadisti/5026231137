@@ -65,3 +65,14 @@ Route::post('/formulir/proses', [PegawaiController :: class, 'proses']); //actio
 Route::get('/blog',[BlogController ::class, 'home']);
 Route::get('/blog/tentang', [BlogController ::class , 'tentang']);
 Route::get('/blog/kontak', [BlogController ::class , 'kontak']);
+
+// route delete
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+Route::post('/pegawai/update','PegawaiController@update');
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
