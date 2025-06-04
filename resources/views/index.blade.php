@@ -36,4 +36,5 @@
 		@endforeach
 	</table>
     {{ $pegawai->Links()}}
-</html>
+
+    @endsection
