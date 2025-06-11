@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\MouseController;
+use App\Http\Controllers\KeranjangController;
 
 Route::get('/bootstrap', function () {
     return view('bootstrap1');
@@ -67,3 +68,13 @@ Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
 Route::get('/mouse', [MouseController::class, 'index']);
 Route::get('/mouse/tambah', [MouseController::class, 'tambah']);
 Route::post('/mouse/store', [MouseController::class, 'store']);
+
+Route::get('/', function () {
+    return view('keranjang.start');
+});
+
+Route::get('/keranjang', [KeranjangController::class, 'start']);
+Route::get('/keranjang/tambah', [KeranjangController::class, 'form']);
+Route::post('/keranjang/store', [KeranjangController::class, 'store']);
+Route::get('/keranjang/cart', [KeranjangController::class, 'cart']);
+Route::get('/keranjang/hapus/{id}', [KeranjangController::class, 'hapus']);
